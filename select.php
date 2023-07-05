@@ -23,7 +23,7 @@ if ($status === false) {
     //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
     while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $view .= "<p>";
-        $view .= $result['indate'] . $result['name'] . $result['email'] . $result['content'];
+        $view .= $result['indate'] . $result['name'] . $result['tag'] . $result['content'];
         $view .= " 緯度: " . $result['lat'];
         $view .= " 経度: " . $result['lng']; 
         $view .= " 住所: " . $result['address'];
@@ -39,7 +39,7 @@ if ($status === false) {
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>フリーアンケート表示</title>
+<title>登録した情報を表示</title>
 
 <style>div{padding: 10px;font-size:16px;}</style>
 </head>

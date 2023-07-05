@@ -2,6 +2,7 @@ let map;
 let geocoder;
 let selectedLatLng;  // ユーザーが選択した緯度と経度を保存する変数
 let address;  // ユーザーが選択した場所の住所を保存する変数
+let marker;  // 現在のマーカーを保存する変数
     
 async function initMap() {
     const { Map, Geocoder } = await google.maps.importLibrary("maps");
@@ -35,6 +36,12 @@ async function initMap() {
             } else {
                 window.alert("Geocoder failed due to: " + status);
             }
+        });
+
+        // 新たなマーカーを作成
+        marker = new google.maps.Marker({
+            position: e.latLng,
+            map,
         });
     });
 }

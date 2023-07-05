@@ -1,0 +1,66 @@
+
+.layout {
+    display: flex;
+}
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    width: 384px;
+    padding: 48px 24px;
+    position: relative;
+}
+
+
+#content,#name,#tag,#lat,#lng,#address {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    border: 1px solid #8a8a8a;
+    padding: 0px 8px ;
+}
+
+#lng {
+    margin-bottom: 0px;
+}
+
+#content {
+    height: 100px;
+}
+
+.sendBtn {
+    width: 100%;
+    height: 40px;
+    border-radius: 64px;
+    border: none;
+    background-color: #0347c5;
+    color: #fff;
+    font-weight: bold;
+}
+
+.title {
+    margin-bottom: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.navbar {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.mapinfo {
+    padding: 16px;
+    background-color: #f2f2f2;
+    margin-bottom: 32px;
+}
+
+.map-title {
+    margin-bottom: 16px;
+    font-weight: bold;
+}

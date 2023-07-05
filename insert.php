@@ -10,7 +10,7 @@
 
 //1. POSTデータ取得
 $name = $_POST['name'];
-$email = $_POST['email'];
+$tag= $_POST['tag'];
 $content = $_POST['content'];
 $lat = $_POST['lat'];
 $lng = $_POST['lng'];
@@ -28,13 +28,13 @@ try {
 //３．データ登録SQL作成
 
 // 1. SQL文を用意
-$stmt = $pdo->prepare("INSERT INTO kadai8_an_table(id, name, email, content, lat, lng, address, indate) VALUES (NULL, :name, :email, :content, :lat, :lng, :address, sysdate())");
+$stmt = $pdo->prepare("INSERT INTO kadai8_an_table(id, name, tag, content, lat, lng, address, indate) VALUES (NULL, :name, :tag, :content, :lat, :lng, :address, sysdate())");
 
 //  2. バインド変数を用意
 // Integer 数値の場合 PDO::PARAM_INT
 // String文字列の場合 PDO::PARAM_STR
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-$stmt->bindValue(':email', $email, PDO::PARAM_STR);
+$stmt->bindValue(':tag', $tag, PDO::PARAM_STR);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->bindValue(':lat', $lat, PDO::PARAM_STR);
 $stmt->bindValue(':lng', $lng, PDO::PARAM_STR);
